@@ -12,12 +12,19 @@
 </head>
 <body>
 
+<!-- pixel shapes, drawn on a tiny grid so they match Crumb; used with <use href="#px-..."> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="px-sparkle" viewBox="0 0 7 7"><path d="M3 0h1v7H3zM0 3h7v1H0zM2 2h3v3H2z"/></symbol>
+  <symbol id="px-heart" viewBox="0 0 7 6"><path d="M1 0h2v1H1zM4 0h2v1H4zM0 1h7v2H0zM1 3h5v1H1zM2 4h3v1H2zM3 5h1v1H3z"/></symbol>
+  <symbol id="px-bug" viewBox="0 0 7 7"><path d="M1 0h1v1H1zM5 0h1v1H5zM2 1h1v1H2zM4 1h1v1H4zM1 2h5v1H1zM0 3h1v1H0zM2 3h3v1H2zM6 3h1v1H6zM1 4h5v1H1zM0 5h1v1H0zM2 5h3v1H2zM6 5h1v1H6zM2 6h3v1H2z"/></symbol>
+</svg>
+
 <div class="bar">
   <div class="wrap">
     <span class="path">~/madeline/<b id="here">home</b></span>
     <nav aria-label="Sections">
       <a href="#home">home</a>
-      <a href="#about">about</a>
+      <a href="#about">about me</a>
       <a href="#work">work samples</a>
       <a href="#materials">materials</a>
       <a href="#contact">contact</a>
@@ -26,22 +33,21 @@
 </div>
 
 <header class="hero" id="home">
-  <div class="cat" role="img" aria-label="Crumb, a pixel-art cat peeking in from the corner">
-    <div class="eye" aria-hidden="true">
-      <div class="base"></div>
-      <div class="pupil"><div class="glint"></div></div>
-      <div class="lid"></div>
-    </div>
-  </div>
-  <div class="wrap">
-    <p class="kicker">// senior portfolio · dominican university</p>
-    <h1>madeline mendoza</h1>
-    <p class="pitch">I like <em>helping people</em> and keeping the processes behind them running smoothly. I study computer science at Dominican University and work as a Payroll Assistant at After School Matters in Chicago. I joined as a payroll intern in 2024 and was promoted a year later. Since then I've resolved more than 5,000 support tickets from staff, parents and teens, in English and Spanish.<i class="cursor" aria-hidden="true"></i></p>
+  <div class="wrap hero-grid">
+    <figure class="photo">
+      <svg class="px sparkle s-photo-a" aria-hidden="true"><use href="#px-sparkle"/></svg>
+      <svg class="px sparkle s-photo-b" aria-hidden="true"><use href="#px-sparkle"/></svg>
+      <img src="img/headshot.jpg" alt="Madeline Mendoza" width="800" height="800">
+    </figure>
+    <div class="intro">
+    <h1>madeline <span class="nowrap">mendoza<svg class="px sparkle s-name" aria-hidden="true"><use href="#px-sparkle"/></svg></span></h1>
+    <p class="pitch">I am a Computer Science student at Dominican University, graduating in May 2027. I have experience in payroll, operations, and support, where I've developed an interest in helping people and supporting the day-to-day processes that keep an organization running smoothly. After graduation, I hope to find opportunities where I can combine my professional experience with my growing technical skills. I am particularly interested in IT support, operations, and business systems roles, where I can solve problems, support others, and use technology to make everyday work easier.</p>
   
     <div class="heading-row">
       <a class="btn primary" href="#work">see my work</a>
-      <a class="btn" href="docs/resume.pdf" target="_blank" rel="noopener">resume ↗</a>
+      <a class="btn" href="docs/madeline_mendoza_resume.pdf">resume</a>
       <a class="btn" href="https://www.linkedin.com/in/madeline-mendoza/" target="_blank" rel="noopener">linkedin ↗</a>
+    </div>
     </div>
   </div>
 </header>
@@ -50,42 +56,24 @@
   <section id="about">
     <div class="wrap about">
       <div>
-        <p class="label">// about <span>· my story so far</span></p>
-        <h2>I like making confusing things simple.</h2>
-        <p class="lede">Most of my work, at my job, in tutoring and in class, comes down to the same thing: understanding how a system works, then explaining it so someone else can use it. That's what drew me to computer science, and it's what I want to keep doing after graduation.</p>
-        <ol class="chapters">
-          <li>
-            <div>
-              <h3>Teaching Excel, in two languages</h3>
-              <p>Volunteering as an Excel tutor at Erie Neighborhood House, I wrote my own lesson plans and switched between English and Spanish to fit each student. It was the first time I saw how much a clear explanation matters.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Payroll intern to Payroll Assistant</h3>
-              <p>I joined After School Matters as a payroll intern in 2024 and was promoted a year later. I've resolved 5,000+ tickets, tracked every lost and reissued payment until it was right, and now train new hires and help interview interns.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Building, not just using, the tools</h3>
-              <p>Through my CS degree and an app development internship at Duct Tape Games, I moved from spreadsheets to Python, SQL, C# and hardware: debugging a Unity game and building a Flask dashboard for a conveyor belt sorter.</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>What's next</h3>
-              <p>After I graduate in May 2027, I want a role where I help people and support the processes that keep a team running, like operations, payroll/HR or technical support, with room to use my CS skills to make those processes better.</p>
-            </div>
-          </li>
-        </ol>
+        <h2 class="label">about me</h2>
+        <p class="lede">I'm a first-generation Computer Science student at Dominican University in River Forest, Illinois, graduating in May 2027. I'm part of the Mazzuchelli Scholars Honors Program, on the Dean's List, and bilingual in English and Spanish.</p>
+        <div class="story">
+          <p class="when">growing up</p>
+          <p>My interest in technology started at a young age. I was always the go-to person in my family for anything computer or tech-related, whether it was setting up devices, troubleshooting problems, navigating online services, filling out forms, or figuring out new apps. I also loved exploring the family computer, downloading just about anything I could find (sometimes giving it a virus or two in the process...oops<svg class="px bug" aria-hidden="true"><use href="#px-bug"/></svg>). It wasn't until I took an introductory computer science course in high school that I realized this curiosity could turn into something I could study and pursue as a career.</p>
+          <p class="when">my journey so far</p>
+          <p>I started at After School Matters in 2024 as a Payroll Intern and was later promoted to Payroll Assistant. I handle payroll and administrative support tickets through Zendesk, maintain records across multiple systems, and train new hires and seasonal interns. I also volunteered as an Excel tutor at Erie Neighborhood House, incorporating both English and Spanish to make lessons more accessible.</p>
+          <p>On the technical side, I interned at Duct Tape Games in early 2026, working with a team of four to debug a 2D Android game using Unity and C#. I've also built a Raspberry Pi and Arduino package sorter with a Flask and SQLite dashboard for a university course project. Currently, I'm developing a web application for JLP Construction LLC to support its remodeling business and consultation scheduling.</p>
+          <p class="when">what's next</p>
+          <p>I enjoy solving problems, learning new things, and finding ways to help others. As I continue developing my technical skills, I'm looking forward to opportunities where I can combine technology with my interest in supporting people and businesses.</p>
+        </div>
       </div>
 
       <aside class="readout" aria-label="At a glance">
-        <h3>// at a glance</h3>
+        <h3>at a glance</h3>
         <dl>
           <dt>now</dt><dd>payroll assistant @ after school matters</dd>
-          <dt>studying</dt><dd>b.s. computer science @ dominican, may 2027</dd>
+          <dt>studying</dt><dd>b.s. computer science @ dominican, may 2027 · first-gen</dd>
           <dt>honors</dt><dd>mazzuchelli scholars · dean's list · 3.9 gpa</dd>
           <dt>speaking</dt><dd>english / español</dd>
           <dt>off the clock</dt><dd>dyeing my hair · concerts &amp; shows</dd>
@@ -99,79 +87,86 @@
 
   <section id="work">
     <div class="wrap">
-      <p class="label">// work samples <span>· the evidence</span></p>
-      <h2>Four projects that show what I bring.</h2>
-      <div class="samples">
-        <article class="sample">
-          <div class="id"><b>01 · technical project</b><span>jan – may 2026</span></div>
-          <h3>Conveyor Belt Location Sorter</h3>
-          <p>Group project for Principles of Unix (CPSC 434): a Raspberry Pi and Arduino conveyor belt that scans QR codes and sorts packages by location.</p>
-          <ul class="pts">
-            <li>Built the Flask/SQLite dashboard to track and audit scanned packages.</li>
-            <li>Wrote Python QR generation/decoding (PyZBar) and Arduino C++ motor control.</li>
-            <li>Fixed camera misreads and servo burnout; coordinated team meetings and deliverables.</li>
-          </ul>
-          <p class="shows"><strong>WHAT IT SHOWS</strong>Full-stack problem solving, hardware debugging and keeping a team on track.</p>
-          <div class="links"><a href="https://github.com/Oluwa-Temmy/434-fullfillment-center" target="_blank" rel="noopener">view code on github ↗</a></div>
-        </article>
+      <h2 class="label">work samples</h2>
+      <ol class="timeline">
+        <li class="entry">
+          <div class="meta">
+            <h3>After School Matters</h3>
+            <p class="kind">Payroll Assistant<span class="d">jun 2025 – present</span></p>
+            <p class="kind">Payroll Intern<span class="d">jun 2024 – jun 2025</span></p>
+          </div>
+          <div class="detail">
+            <p class="area">payroll · customer support</p>
+            <p>I started at After School Matters as a Payroll Intern and, within a year, transitioned into a newly created Payroll Assistant role. I support payroll operations for staff and thousands of teen participants, answering questions in English and Spanish, tracking payment issues, auditing records, and maintaining accurate information across systems like ADP, Excel, Google Sheets, Box, and Cityspan. My role also involves collaborating with other departments, training team members on internal software, supporting intern onboarding, and helping resolve questions within my team. I also temporarily stepped into a Site Supervisor role, where I supervised a high school intern and supported day-to-day operations.</p>
+          </div>
+        </li>
 
-        <article class="sample">
-          <div class="id"><b>02 · workplace</b><span>2024 – present</span></div>
-          <h3>Payroll Support &amp; Payment Tracking</h3>
-          <p>My day-to-day work at After School Matters, supporting payroll for staff and thousands of teen participants.</p>
-          <ul class="pts">
-            <li>5,000+ Zendesk tickets resolved, plus phone, email and in-person support.</li>
-            <li>Track lost, stopped, stale, returned and reissued payments in Excel and Google Sheets.</li>
-            <li>Send payment status notices by mail merge; audit data across ADP, Box and Cityspan.</li>
-          </ul>
-          <p class="shows"><strong>WHAT IT SHOWS</strong>Accuracy with confidential data, follow-through, and calm, bilingual customer support.</p>
-        </article>
+        <li class="entry">
+          <div class="meta">
+            <h3>JLP Construction LLC</h3>
+            <p class="kind">client project<span class="d">fall 2026 – present</span></p>
+          </div>
+          <div class="detail">
+            <p class="area">web development · client work</p>
+            <p>Since fall 2026, I've been building a web application for JLP Construction LLC, a remodeling business. The project includes a client-facing booking site where customers can request consultations and an admin dashboard where the owner can manage incoming requests and track payment milestones for projects. The application is still a work in progress, and I'm incorporating AI tools into my development process as I build out its features and functionality.</p>
+          </div>
+        </li>
 
-        <article class="sample">
-          <div class="id"><b>03 · training &amp; leadership</b><span>2025 – present</span></div>
-          <h3>New-Hire Training Guides</h3>
-          <p>PowerPoint guides and reference materials I created to train new hires and seasonal interns on Zendesk and RingCentral.</p>
-          <ul class="pts">
-            <li>Lead the training sessions for each new group of interns.</li>
-            <li>Help the Payroll Manager interview and evaluate intern candidates.</li>
-            <li>Served as a Seasonal Site Supervisor in summer 2025.</li>
-          </ul>
-          <p class="shows"><strong>WHAT IT SHOWS</strong>Turning a complex process into clear steps, and growing into a leadership role.</p>
-        </article>
+        <li class="entry">
+          <div class="meta">
+            <h3>Conveyor Belt Location Sorter</h3>
+            <p class="kind">group project<span class="d">spring 2026</span></p>
+          </div>
+          <div class="detail">
+            <p class="area">python · flask · hardware</p>
+            <p>For Principles of Unix (CPSC 434) in Spring 2026, my team built a Raspberry Pi and Arduino-powered conveyor belt that scans QR codes and sorts packages by location. I helped develop the Flask and SQLite dashboard to track and audit scanned packages, wrote Python QR code scripts using PyZBar, and contributed to Arduino motor control. When we encountered camera misreads and burned-out servos, I helped troubleshoot and implement fixes while keeping team meetings and deliverables on track. Through this project, I gained hands-on experience with embedded systems and hardware, learning how programming, electrical components, and mechanical systems come together to create a working product.</p>
+            <div class="photos">
+              <a class="ph" href="img/conveyor.jpg"><img src="img/conveyor.jpg" alt="Conveyor belt sorter undergoing final testing, with its camera arm and Raspberry Pi and Arduino components visible." width="600" height="800" loading="lazy"></a>
+              <a class="ph" href="img/prototype.jpg"><img src="img/prototype.jpg" alt="An early prototype of the belt wrapped in gray tape, with the motor and wiring beside it" width="1050" height="1400" loading="lazy"></a>
+              <a class="ph" href="img/building.jpg"><img src="img/building.jpg" alt="Fitting the conveyor belt frame together during the build" width="1050" height="1400" loading="lazy"></a>
+              <a class="ph" href="img/team.jpg"><img src="img/team.jpg" alt="The four-person CPSC 434 project team in safety vests" width="1400" height="1050" loading="lazy"></a>
+            </div>
+            <p class="links"><a href="https://github.com/Oluwa-Temmy/434-fullfillment-center" target="_blank" rel="noopener">view code on github ↗</a></p>
+          </div>
+        </li>
 
-        <article class="sample">
-          <div class="id"><b>04 · internship</b><span>jan – mar 2026</span></div>
-          <h3>Duct Tape Games: App Development</h3>
-          <p>Remote internship on a 4-person team building a 2D Android game in Unity/C#.</p>
-          <ul class="pts">
-            <li>Diagnosed and fixed bugs and runtime errors in the game's scripts.</li>
-            <li>Reviewed code for performance issues and documented improvements.</li>
-            <li>Verified Photon Engine and PlayFab integrations; tracked issues in Trello and GitHub.</li>
-          </ul>
-          <p class="shows"><strong>WHAT IT SHOWS</strong>Reading and improving someone else's code, and working on a remote dev team.</p>
-        </article>
-      </div>
+        <li class="entry">
+          <div class="meta">
+            <h3>Duct Tape Games</h3>
+            <p class="kind">internship / SI Expo<span class="d">jan – mar 2026</span></p>
+          </div>
+          <div class="detail">
+            <p class="area">unity · c# · game development</p>
+            <p>In early 2026, I worked as an Application Development Intern on a four-person remote team developing a 2D Android game using Unity and C#. I identified and fixed bugs and runtime errors, documented potential performance improvements for existing scripts, and tested integrations with Photon Engine and PlayFab. I tracked issues and development tasks using Trello and GitHub, communicated with teammates through Discord, and emailed daily progress reports to the company owner. In April 2026, I presented my internship experience and project at the SI Expo.</p>
+            <a class="ph cover" href="img/expo.jpg"><img src="img/expo.jpg" alt="Me, standing next to my Duct Tape Games internship poster at the SI Expo" width="1050" height="1400" loading="lazy"></a>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
+  <dialog class="lightbox" id="lightbox" aria-label="Photo">
+    <img alt="">
+    <p class="lightbox-caption"></p>
+    <button type="button" class="lightbox-close">close ×</button>
+  </dialog>
+
   <section id="materials">
     <div class="wrap">
-      <p class="label">// professional materials</p>
-      <h2>Resume, plans and documents.</h2>
+      <h2 class="label">professional materials</h2>
+      <!-- To add a PDF: put the file in docs/, then copy one of the <li> rows below and change the
+           href, name and description. Any link ending in .pdf opens in the viewer on this page. -->
       <div class="ls">
         <div class="head"><b>$</b> ls ~/madeline/materials</div>
         <ul>
-          <li><a href="docs/resume.pdf" target="_blank" rel="noopener">
-            <span class="type">[pdf]</span><span class="name">Resume</span><span class="open">open ↗</span>
-            <span class="desc">Current resume: experience, projects, education and skills.</span>
+          <li><a href="docs/madeline_mendoza_resume.pdf">
+            <span class="type">[pdf]</span><span class="name">Resume</span><span class="open">view</span>
           </a></li>
-          <li><a href="docs/cover-letter.pdf" target="_blank" rel="noopener">
-            <span class="type">[pdf]</span><span class="name">Cover Letter</span><span class="open">open ↗</span>
-            <span class="desc">A sample application letter for the kinds of roles I'm pursuing.</span>
+          <li><a href="docs/madeline_mendoza_cover-letter.pdf">
+            <span class="type">[pdf]</span><span class="name">Cover Letter</span><span class="open">view</span>
           </a></li>
-          <li><a href="docs/cv400-transition-plan.pdf" target="_blank" rel="noopener">
-            <span class="type">[pdf]</span><span class="name">CV400 · Transition Career &amp; Vocation Planning and Goal Setting</span><span class="open">open ↗</span>
-            <span class="desc">My career plan and goals for the transition after Dominican.</span>
+          <li><a href="docs/madeline_mendoza_cv400-transition-plan.pdf">
+            <span class="type">[pdf]</span><span class="name">CV400 · Transition Career &amp; Vocation Planning and Goal Setting</span><span class="open">view</span>
           </a></li>
           <li><a href="https://www.linkedin.com/in/madeline-mendoza/" target="_blank" rel="noopener">
             <span class="type">[link]</span><span class="name">LinkedIn</span><span class="open">visit ↗</span>
@@ -179,16 +174,40 @@
           </a></li>
         </ul>
       </div>
+
+      <div class="viewer" id="viewer" hidden>
+        <div class="viewer-bar">
+          <span class="viewer-title"><b>$</b> open <span id="viewer-name"></span></span>
+          <span class="viewer-actions">
+            <a id="viewer-tab" href="#" target="_blank" rel="noopener">new tab ↗</a>
+            <a id="viewer-dl" href="#" download>download ↓</a>
+            <button type="button" id="viewer-close">close ×</button>
+          </span>
+        </div>
+        <iframe id="viewer-frame" title="Document viewer"></iframe>
+        <p class="viewer-missing" id="viewer-missing" hidden>This document hasn't been uploaded yet. Check back soon.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap">
-      <p class="label">// contact</p>
-      <h2>Say hello.</h2>
-      <div class="contact">
-        <span class="addr" id="email">madelinemendoza317@gmail.com</span>
-        <button type="button" id="copy">copy email</button>
+      <div class="contact-text">
+        <h2 class="label">contact</h2>
+        <div class="contact">
+          <span class="addr" id="email">madelinemendoza317@gmail.com</span>
+          <button type="button" id="copy">copy email</button>
+          <a class="btn" href="https://www.linkedin.com/in/madeline-mendoza/" target="_blank" rel="noopener">linkedin ↗</a>
+        </div>
+      </div>
+      <div class="crumb-slot" role="img" aria-label="Crumb, a pixel-art cat, peeking out at the contact section">
+        <div class="cat">
+          <div class="eye" aria-hidden="true">
+            <div class="base"></div>
+            <div class="pupil"><div class="glint"></div></div>
+            <div class="lid"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -196,8 +215,8 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr">2026</span> madeline mendoza</span>
-    <span>status: graduating may 2027 · crumb: still supervising</span>
+    <span>© <span id="yr">2026</span> madeline mendoza <svg class="px heart" aria-hidden="true"><use href="#px-heart"/></svg></span>
+    <span>status: graduating may 2027 · crumb: supervising</span>
   </div>
 </footer>
 
